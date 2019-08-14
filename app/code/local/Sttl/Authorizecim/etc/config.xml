@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Silver Touch Technologies Limited.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.silvertouch.com/MagentoExtensions/LICENSE.txt
+ *
+ * @category   Sttl
+ * @package    Sttl_Authorizecim
+ * @copyright  Copyright (c) 2011 Silver Touch Technologies Limited. (http://www.silvertouch.com/MagentoExtensions)
+ * @license    http://www.silvertouch.com/MagentoExtensions/LICENSE.txt
+ */ 
+-->
+<config>
+    <modules>
+        <Sttl_Authorizecim>
+            <version>1.0.2</version>
+        </Sttl_Authorizecim>
+    </modules>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <authorizecim>
+                            <title>Authorize Module</title>
+                            <sort_order>40</sort_order>
+                        </authorizecim>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <authorizecim translate="title" module="authorizecim"> 
+                                            <title>Authorize Setting</title>
+                                            <sort_order>50</sort_order>
+                                        </authorizecim>
+                                    </children>							
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml> 
+    <global>
+        <blocks>
+            <authorizecim>
+                <class>Sttl_Authorizecim_Block</class>
+            </authorizecim>
+        </blocks>
+        <models>
+            <authorizecim>
+                <class>Sttl_Authorizecim_Model</class>
+                <resourceModel>authorizecim_mysql4</resourceModel>
+            </authorizecim>
+            <authorizecim_mysql4>
+                <class>Sttl_Authorizecim_Model_Mysql4</class>
+                <entities>
+                    <transaction>
+                        <table>authorizecim_transaction</table>
+                    </transaction>
+                </entities>
+            </authorizecim_mysql4>			
+        </models>
+        <helpers>
+            <authorizecim>
+                <class>Sttl_Authorizecim_Helper</class>
+            </authorizecim>
+        </helpers>
+        <resources>
+            <authorizecim_setup>
+                <setup>
+                    <module>Sttl_Authorizecim</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </authorizecim_setup>   
+            <authorizecim_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </authorizecim_write>
+            <authorizecim_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </authorizecim_read>
+        </resources>        
+    </global>
+    <default>
+        <payment>
+            <authorizecim>
+                <active>0</active>
+                <display_cc>1</display_cc>
+                <title>Credit Card (Authorize.net CIM)</title>
+                <model>authorizecim/payment</model>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <debug>0</debug>
+                <cgi_url>https://apitest.authorize.net/xml/v1/request.api</cgi_url>
+                <login backend_model="adminhtml/system_config_backend_encrypted"/>
+                <order_status>processing</order_status>
+                <payment_action>authorize</payment_action>
+                <trans_key backend_model="adminhtml/system_config_backend_encrypted"/>
+                <allowspecific>0</allowspecific>
+                <currency>USD</currency>
+            </authorizecim>
+        </payment>
+    </default>
+</config>

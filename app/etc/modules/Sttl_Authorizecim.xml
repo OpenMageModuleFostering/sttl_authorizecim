@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Silver Touch Technologies Limited.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.silvertouch.com/MagentoExtensions/LICENSE.txt
+ *
+ * @category   Sttl
+ * @package    Sttl_Authorizecim
+ * @copyright  Copyright (c) 2011 Silver Touch Technologies Limited. (http://www.silvertouch.com/MagentoExtensions)
+ * @license    http://www.silvertouch.com/MagentoExtensions/LICENSE.txt
+ */ -->
+<config>
+    <modules>
+        <Sttl_Authorizecim>
+            <active>true</active>
+            <codePool>local</codePool>
+			<depends>
+                <Mage_Payment/>
+            </depends>
+        </Sttl_Authorizecim>
+    </modules>
+</config>

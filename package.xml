@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+    <name>Sttl_Authorizecim</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license uri="http://www.extension.silvertouch.com/licence">STTL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Store Customer information on Authorize.net Secure Servers. The method is PCI compliant.</summary>
+    <description>    The extension does not store CVV information and is thus PCI Compliant.&#xD;
+    All credit card related sensitive information will be saved on the Authorize.net secure servers. This makes your website completely SAFE and PCI compliant.&#xD;
+    A unique transaction ID will be created with each order. Using this transaction ID, we can capture payment, make refund and partial refund.&#xD;
+    Place orders through the Magento back end using the module and get payments in realtime.&#xD;
+    Enable/Disable the saved credit card details feature. If it is enabled, customer entered CC details will be automatically stored once the transaction is complete.&#xD;
+    The stored Credit Card details are displayed to customers in DROP DOWN to select any one at time of second payment.&#xD;
+    Split invoices or Multiple Invoices can also be generated for a single order.</description>
+    <notes>Store Customer information on Authorize.net Secure Servers. The method is PCI compliant.</notes>
+    <authors><author><name>Silvertouch</name><user>silvertouch</user><email>magento@silvertouch.com</email></author></authors>
+    <date>2014-11-27</date>
+    <time>07:01:45</time>
+    <contents><target name="magelocal"><dir name="Sttl"><dir name="Authorizecim"><dir name="Block"><dir name="Form"><file name="Cim.php" hash="780bb66cabad486addb3b33ef3976849"/></dir><dir name="Info"><file name="Cim.php" hash="29ce6bab73d82dd737222995ec684c7c"/></dir></dir><dir name="Helper"><file name="Data.php" hash="eac908b6e9796b06b46ef430213a1d25"/></dir><dir name="Model"><file name="Api.php" hash="249bd438b1a250f024a4fc8d27278727"/><dir name="Mysql4"><dir name="Transaction"><file name="Collection.php" hash="5ad3dcb791519bfccc34be021fb68572"/></dir><file name="Transaction.php" hash="48fea4dff97f25044ec4a7160fcad446"/></dir><file name="Payment.php" hash="1154efaefabdd467bcaccd79d25b8f80"/><dir name="System"><dir name="Config"><dir name="Backend"><file name="Encrypted.php" hash="386fac227eb4d2b27fa607c41a5901b8"/></dir><dir name="Source"><file name="Cctype.php" hash="da072261358e593ccf948ec213677f75"/><file name="Method.php" hash="62c3344c8161b192e237c3cda332557c"/><file name="PaymentAction.php" hash="c73dce91da2f91c3280880ac2d077fe7"/><file name="Yesno.php" hash="82d3d861803882979dd3939b287ff1d6"/></dir></dir></dir><file name="Transaction.php" hash="4bcc439d13e7d49403e2db9f37e53032"/></dir><dir name="etc"><file name="config.xml" hash="cd1edb5e96a8b766e4d35048e84a8ce6"/><file name="system.xml" hash="7656f0b87fca83f0b7f6505a04d6e24d"/></dir><dir name="sql"><dir name="authorizecim_setup"><file name="mysql4-install-1.0.0.php" hash="d77cb5dd3de267977121e5e2a778fbab"/><file name="mysql4-upgrade-1.0.0-1.0.1.php" hash="22793c1493f3cc6f454d75b34c401bd8"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sttl_Authorizecim.xml" hash="3ac020daad6c9ed617f11c0a15e146c8"/></dir></target><target name="mage"><dir name="."><file name="SILVER_AuthorizeCIM-User_Guide-V.1.0.1.doc" hash="96cd6725fb4804e48862fb9d372b9a4f"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="authorizecim"><dir name="form"><file name="cim.phtml" hash="90230d3f5d218bde9935d8a2fda6b600"/><file name="cim_1.phtml" hash="41eb14bfb9f3fbd0b79b4d22c0cb51a8"/></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="authorizecim"><dir name="form"><file name="cim.phtml" hash="62aa593c1c31ced3f5c2507940e2ce9c"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
