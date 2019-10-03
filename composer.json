@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Sttl_Authorizecim",
+    "name": "OpenMageModuleFostering\/Sttl_Authorizecim",
     "type": "magento-module",
     "license": "STTL",
     "homepage": "",
     "description": "Store Customer information on Authorize.net Secure Servers. The method is PCI compliant.",
     "authors": [
-    {
-        "name": "Silvertouch",
-        "email": "magento@silvertouch.com"
-    }
-],
+        {
+            "name": "Silvertouch",
+            "email": "magento@silvertouch.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
